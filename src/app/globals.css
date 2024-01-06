@@ -1,27 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.head_item{
+    @apply flex items-center justify-end text-xs text-primary font-primary;
+}
+.menu_item{
+    @apply flex flex-col gap-3 text-xs text-primary font-primary;
+}
+.menu_item li a{
+    @apply hover:text-brand flex transition-all
+}
+.menu_item li a span{
+    @apply ml-2
+}
+.menu_item li a svg{
+    @apply text-sm
+}
+.menu_item li a .arrow{
+    @apply opacity-0 text-brand ml-auto mr-[10px]
+}
+.menu_item li a:hover .arrow{
+    @apply opacity-100
+}
+.search{
+    @apply bg-secondary w-full rounded-[10px] flex justify-between mx-7;
+}
+.search_btn{
+    @apply w-12 h-11 bg-brand rounded-[10px] flex justify-center items-center text-white text-2xl;
+}
+.cart{
+    @apply w-8 h-8 rounded-xl bg-[#F6E8DF] flex justify-center items-center text-brand;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.watch-submenu{
+    @apply w-[230px] h-full invisible opacity-0 bg-white absolute top-0 left-full py-1.5 pl-1.5;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.menu_item li:hover .watch-submenu{
+    @apply visible opacity-100
+}
+.womenBag-submenu{
+    @apply w-[230px] h-full invisible opacity-0 bg-white absolute top-0 left-full py-1.5 pl-1.5 pr-[10px];
+}
+.watch-submenu li:hover .womenBag-submenu{
+    @apply visible opacity-100
 }
