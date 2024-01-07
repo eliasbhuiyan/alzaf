@@ -14,7 +14,7 @@ export const Navbar = () => {
             <div className='flex items-center'>
                 <div>
                     <Link href='/'>
-                      <Image src='/logo.png' className='w-32 h-9' width={130} height={38}/>
+                      <Image src='/logo.png' className='w-32 h-9' width={130} height={38} alt='logo'/>
                     </Link>
                 </div>
                 <div className='search'>
@@ -44,7 +44,7 @@ export const Navbar = () => {
                 </div>
                 <div className='ml-7'>
                     <Link href='#'>
-                      <Image src='/cloud.png' width={177} height={44}/>
+                      <Image src='/cloud.png' width={177} height={44} alt='cloud'/>
                     </Link>
                 </div>
             </div>

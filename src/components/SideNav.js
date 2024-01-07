@@ -126,7 +126,7 @@ export const SideNav = () => {
             <li>
                 <Link href='#'>
                 <IoIosMan />
-                <span>Men's & Boys' Fashion</span>
+                <span>Men&apos;s & Boys&apos; Fashion</span>
                 <FaChevronRight className="arrow"/>
                 </Link>
             </li>
